@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  watermetergatewayexporter:
+    image: revenberg/dockerprometeus2fluxdb
+    container_name: dockerprometeus2fluxdb
+    environment:
+      - LOG_LEVEL=DEBUG
+    restart: always   
+    ports:
+      - 9011:9011
+    expose:
+      - 9011
